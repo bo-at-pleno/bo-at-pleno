@@ -1,0 +1,85 @@
+let mapleader = " "
+set surround
+set multiple-cursors
+set nu
+set rnu
+set hlsearch
+set incsearch
+set showmode
+set clipboard=unnamed
+set clipboard+=ideaput
+set ignorecase smartcase
+" Insert
+inoremap jk <Esc>
+" Normal
+nnoremap dd ddzz
+" Visual
+vnoremap d dzz
+
+" Normal + Visual
+noremap # #zz
+noremap * *zz
+noremap w wzz
+noremap W Wzz
+noremap e ezz
+noremap E Ezz
+noremap b bzz
+noremap B Bzz
+noremap H Hzz
+noremap L Lzz
+noremap 0 0zz
+noremap $ $zz
+noremap ^ ^zz
+" noremap j jzz
+" noremap k kzz
+noremap G Gzz
+noremap u uzz
+noremap ( (zz
+noremap ) )zz
+noremap { {zz
+noremap } }zz
+noremap [{ [{zz
+noremap ]} ]}zz
+noremap gd gdzz
+noremap <C-O> <ESC>:action Back<CR>
+noremap <C-I> <ESC>:action Forward<CR>
+noremap <C-D> <C-D>zz
+noremap <C-U> <C-U>zz
+
+
+" zen mode
+noremap <leader>z <Esc>:action ToggleDistractionFreeMode<CR>
+" toggle sidebar
+noremap <leader>e <Esc>:action ActivateProjectToolWindow<CR>
+" jump to next error
+noremap <leader>j <ESC>:action GotoNextError<CR>
+" jump to previous error，就近原则
+noremap <leader>k <ESC>:action GotoPreviousError<CR>
+" light up
+noremap <leader>l <ESC>:action HighlightUsagesInFile<CR>
+" go back and forward
+noremap gb <ESC>:action Back<CR>
+noremap gf <ESC>:action Forward<CR>
+
+noremap gs <ESC>:action GotoImplementation<CR>
+" goto declaration
+noremap gd <ESC>:action GotoDeclaration<CR>
+
+" goto references 
+noremap gr <ESC>:action FindUsages<CR>
+
+" g
+"noremap gg <ESC>:action MUST_NOT_BE_CHANGED!!!<CR>
+" hierarchy
+noremap ghc <ESC>:action CallHierarchy<CR>
+noremap ght <ESC>:action TypeHierarchy<CR>
+noremap ghm <ESC>:action MethodHierarchy<CR>
+" j analyze data flow in
+noremap gj <ESC>:action SliceBackward<CR>
+" k analyze data flow out
+noremap gk <ESC>:action SliceForward<CR>
+" goto class
+noremap gn <ESC>:action GotoClass<CR>
+" goto method
+noremap gm <ESC>:action GotoSymbol<CR>
+
